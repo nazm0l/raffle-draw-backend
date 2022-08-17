@@ -5,8 +5,16 @@ class MyDB {
     this.tickets = [];
   }
 
-  //Create new Ticket
-  create() {}
+  /**
+   * Create a new ticket
+   * @param {string} username
+   * @param {number} price
+   */
+  create(username, price) {
+    const ticket = new Ticket(username, price);
+    this.tickets.push(ticket);
+    return ticket;
+  }
 
   //Sell multiple ticket
   bulkCreate() {}
